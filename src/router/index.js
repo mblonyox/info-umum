@@ -1,21 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Main from '@/components/layouts/Main'
 import Home from '@/components/Home'
+
+import Organisasi from './organisasi.route'
+
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      component: Main,
-      children: [
-        {
-          path: '',
-          component: Home
-        }
-      ]
-    }
+      component: Home
+    },
+    Organisasi
   ]
 })
