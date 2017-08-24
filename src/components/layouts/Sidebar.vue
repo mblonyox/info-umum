@@ -9,8 +9,13 @@
 <script>
   export default {
     computed: {
-      show() {
-        return this.$store.state.layout.sidebar;
+      show: {
+        get: function() {
+          return this.$store.state.layout.sidebar
+        },
+        set: function(s) {
+          this.$store.commit('setSidebar', s)
+        }
       }
     }
   }

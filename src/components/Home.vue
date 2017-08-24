@@ -12,12 +12,12 @@
       </v-layout>
       <v-divider></v-divider>
       <v-layout row wrap mt-5>
-        <v-flex xs3 v-for="mod in mods" :key="mod.name">
-          <v-card>
+        <v-flex xs12 sm6 md3 v-for="mod in mods" :key="mod.name">
+          <v-card @click="navigate(mod.path)" class="module-card">
             <v-card-title>
-              <div class="text-xs-center green--text">
-                <v-icon x-large>{{ mod.icon }}</v-icon>
-                <p>{{ mod.name }}</p>
+              <div class="green--text module-title">
+                <v-icon x-large class="module-icon">{{ mod.icon }}</v-icon>
+                <p class="text-xs-center">{{ mod.name }}</p>
               </div>
             </v-card-title>
           </v-card>
@@ -44,6 +44,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    navigate(path) {
+      this.$router.push(path);
+    }
   }
 }
 </script>
@@ -52,5 +57,16 @@ export default {
 #logo-utama {
   max-width: 100%;
   max-height: 100%;
+}
+.module-card {
+  cursor: pointer;
+}
+.module-title {
+  width: 100%;
+}
+.module-icon {
+  display: flex;
+  flex: 1;
+  margin: auto;
 }
 </style>
