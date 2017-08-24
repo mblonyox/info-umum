@@ -15,8 +15,8 @@
         <v-flex xs3 v-for="mod in mods" :key="mod.name">
           <v-card>
             <v-card-title>
-              <div>
-                <v-icon>{{ mod.icon }}</v-icon>
+              <div class="text-xs-center green--text">
+                <v-icon x-large>{{ mod.icon }}</v-icon>
                 <p>{{ mod.name }}</p>
               </div>
             </v-card-title>

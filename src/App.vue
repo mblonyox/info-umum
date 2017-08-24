@@ -10,3 +10,8 @@
 <style lang="stylus">
   @import './stylus/main'
 </style>
+
+<style lang="sass">
+  $fa-font-path: "~font-awesome/fonts";
+  @import '~font-awesome/scss/font-awesome.scss';
+</style>
